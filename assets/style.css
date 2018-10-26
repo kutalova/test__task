@@ -23,7 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 .form__wrapper .form {
   margin: 0 auto;
@@ -163,9 +163,6 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .form__wrapper {
-    height: auto;
-  }
   .form__wrapper .form {
     flex-flow: column;
     height: auto;
