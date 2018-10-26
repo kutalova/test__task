@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Task</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+</head>
+<body>
+<div class="form__wrapper">
+    <div class="form">
+        <aside class="form__about">
+            <h1>hello, stranger</h1>
+            <hr>
+            <p>
+                In our portal you can handle all your project in the easiest of possible ways, and keep it under your
+                total
+                control.
+            </p>
+
+        </aside>
+        <div class="form__content">
+
+            <form action="#" class="form__registration">
+                <h2>Registration</h2>
+                <span>Fill all the fields below.</span>
+                <div class="form__field-wrapper">
+                    <input class="form__field" type="email" id="email" placeholder="Enter your email" required/>
+                    <label for="email" class="form__field-placeholder">Enter your email</label>
+                </div>
+                <div class="form__field-wrapper">
+                    <input class="form__field" type="password" placeholder="Type your password here" id="password"
+                           pattern="(?=.*\d)(?=.*[a-zA-Zа-яА-Я])(?=.*[?!№#%:;*/\+-]).{8,}" required title="Must contain at least one number, one letter, one of the ?!№#%:;*/\+- symbols and at least 8 or more characters"/>
+                    <label for="password" class="form__field-placeholder">Type your password here</label>
+                </div>
+
+
+                <button type="submit">
+                    <span>create account</span>
+                </button>
+                <div class="form__terms-and-conditions">By signing up I accept with <a href="#">Terms and Conditions</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

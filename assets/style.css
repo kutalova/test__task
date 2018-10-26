@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  background-color: #70b6e2;
+}
+
+.form__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form__wrapper .form {
+  margin: 0 auto;
+  display: flex;
+  flex-basis: 85vw;
+  max-width: 866px;
+  border-radius: 2px;
+  background: white;
+  box-shadow: 0 8px 13px 0 rgba(255, 255, 255, 0.15);
+  height: 562px;
+}
+.form__wrapper .form > * {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.form__wrapper .form .form__about {
+  background: url("bg_aside.png") no-repeat center center;
+  background-size: cover;
+  flex: 1 0 42%;
+  padding: 0 2em 0 4.5em;
+  max-width: 356px;
+}
+.form__wrapper .form .form__about h1 {
+  font-size: 1.7em;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
+}
+.form__wrapper .form .form__about hr {
+  width: 92px;
+  height: 4px;
+  background-color: white;
+  margin: 2em 0 3em;
+}
+.form__wrapper .form .form__about p {
+  color: #c9e7fa;
+}
+.form__wrapper .form .form__content {
+  flex: 1 0 59%;
+  align-items: center;
+}
+.form__wrapper .form .form__content .form__registration,
+.form__wrapper .form .form__content .form__registration > * {
+  min-width: 250px;
+  max-width: 300px;
+  width: 35vw;
+}
+.form__wrapper .form .form__content .form__registration h2,
+.form__wrapper .form .form__content .form__registration > * h2 {
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.33;
+  text-align: left;
+  color: #70b6e2;
+  text-transform: uppercase;
+  margin-bottom: 1.85em;
+}
+.form__wrapper .form .form__content .form__registration span,
+.form__wrapper .form .form__content .form__registration > * span {
+  font-family: Myriad Pro, "Open Sans", sans-serif;
+  color: #616161;
+}
+.form__wrapper .form .form__content .form__field-wrapper {
+  margin: 0.4em 0;
+  display: flex;
+  flex-flow: column-reverse;
+}
+.form__wrapper .form .form__content .form__field {
+  -webkit-appearance: none;
+  border: 1px #ced8ea solid;
+  border-radius: 3px;
+  line-height: 2;
+  text-indent: 1em;
+  color: #575758;
+  height: 3em;
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+.form__wrapper .form .form__content .form__field-placeholder {
+  touch-action: manipulation;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  color: #ced8ea;
+  opacity: 1;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+.form__wrapper .form .form__content .form__field:placeholder-shown + .form__field-placeholder {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(1em, 2.15em);
+}
+.form__wrapper .form .form__content .form__field:focus {
+  outline: 0;
+  border: solid 2px #70b6e2;
+}
+.form__wrapper .form .form__content .form__field:not(:placeholder-shown) + .form__field-placeholder,
+.form__wrapper .form .form__content .form__field:focus + .form__field-placeholder {
+  transform: translate(0, 0);
+  cursor: pointer;
+  font-size: 0.85em;
+  color: #70b6e2;
+  font-weight: 600;
+  line-height: 2.15;
+}
+.form__wrapper .form .form__content button[type^=submit] {
+  border-radius: 2px;
+  box-shadow: 0 3px 10px 0 rgba(106, 202, 234, 0.35);
+  background-color: #70b6e2;
+  -webkit-appearance: none;
+  border: none;
+  margin: 1em 0;
+  text-transform: uppercase;
+  height: 36px;
+}
+.form__wrapper .form .form__content button[type^=submit] span {
+  background: url(padlock.png) no-repeat left center;
+  color: white;
+  text-indent: 1.6em;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.form__wrapper .form .form__content .form__terms-and-conditions {
+  font-size: 0.9em;
+}
+.form__wrapper .form .form__content .form__terms-and-conditions a {
+  color: #70b6e2;
+}
+
+@media screen and (max-width: 600px) {
+  .form__wrapper {
+    height: auto;
+  }
+  .form__wrapper .form {
+    flex-flow: column;
+    height: auto;
+    max-height: unset;
+  }
+  .form__wrapper .form .form__about {
+    padding: 2em;
+    max-width: 100%;
+    flex: 2 0 25%;
+  }
+  .form__wrapper .form .form__about hr {
+    margin: 1em 0 1.5em;
+  }
+  .form__wrapper .form .form__content {
+    padding: 2em;
+    align-items: flex-start;
+  }
+  .form__wrapper .form .form__content .form__registration,
+.form__wrapper .form .form__content .form__registration > * {
+    width: 100%;
+    max-width: 100%;
+  }
+  .form__wrapper .form .form__content .form__registration h3,
+.form__wrapper .form .form__content .form__registration > * h3 {
+    margin-bottom: 1em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
